@@ -99,14 +99,26 @@ const rebuildOtter = async () => {
     // Now we insert to the DOM
     cardSection.append(documentFragment)
 
-    userInfoButton.addEventListener('click', function () {
+
+    // refactor the event listener to a named function instead of anonymous as recommended by instructor
+    userInfoButton.addEventListener('click', handleClickEvent);
+    function handleClickEvent() {
         userInfoButton.classList.toggle('active');
         if (userInfoButton.classList.contains('active')) {
             userInfoButton.textContent = 'I am Online now, howdy!';
         } else {
             userInfoButton.textContent = 'Offline, click to call me!';
         }
-    });
+    }    
+
+    // userInfoButton.addEventListener('click', function () {
+    //     userInfoButton.classList.toggle('active');
+    //     if (userInfoButton.classList.contains('active')) {
+    //         userInfoButton.textContent = 'I am Online now, howdy!';
+    //     } else {
+    //         userInfoButton.textContent = 'Offline, click to call me!';
+    //     }
+    // });
 };
 
 rebuildOtter();

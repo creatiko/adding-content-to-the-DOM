@@ -6,25 +6,25 @@ const restyleOtter = async () => {
     const cardContainerSection = document.createElement('section');
     cardContainerSection.id = 'cardContainer';
     const profileCardDiv = document.createElement('div');
-    profileCardDiv.classList.add('profileCard');
+    profileCardDiv.classList.add('profileCard'); // creates <section id="profileCard"></section>
     const picFrameDiv = document.createElement('div');
-    picFrameDiv.classList.add('picFrame');
-    const picFrameDivImg = document.createElement('img');
+    picFrameDiv.classList.add('picFrame'); // creates <div class="picFrame"></div>
+    const picFrameDivImg = document.createElement('img'); 
     picFrameDivImg.setAttribute('src', './images/otter_profile.webp'); // Set the src
     picFrameDivImg.setAttribute('alt', 'profilePic'); // Set the alt text
-    picFrameDiv.append(picFrameDivImg); //
+    picFrameDiv.append(picFrameDivImg); // creates <div class="picFrame"><img src="./images/otter_profile.webp" alt="'profilePic"></div>
     const userInfoDiv = document.createElement('div');
-    userInfoDiv.classList.add('userInfo');
+    userInfoDiv.classList.add('userInfo'); // creates <div class="userInfo"></div>
     const userInfoTextDiv = document.createElement('div');
     const userInfoTextH2 = document.createElement('h2');
     userInfoTextH2.textContent = `Whiskers McOtter`;
     const userInfoTextP = document.createElement('p');
     userInfoTextP.textContent = `Hi! My name is Whiskers McOtter and I'm from Seattle, Washington. Some of my favorite things are Frappuccinos and fish.`;
-    userInfoTextDiv.append(userInfoTextH2, userInfoTextP);
+    userInfoTextDiv.append(userInfoTextH2, userInfoTextP); // creates <div><h2>Whiskers McOtter</h2><p>Hi! My name is Whiskers McOtter and I'm from Seattle, Washington. Some of my favorite things are Frappuccinos and fish.</p></div >
     const userInfoButtonDiv = document.createElement('div');
     const userInfoButton = document.createElement('button');
     userInfoButton.classList.add('active');
-    userInfoButtonDiv.append(userInfoButton);
+    userInfoButtonDiv.append(userInfoButton); // creates <div><button class="active">Online now!</button></div >
 
     userInfoDiv.append(userInfoTextDiv, userInfoButtonDiv);
     

@@ -119,6 +119,11 @@ const rebuildOtter = async () => {
     //         userInfoButton.textContent = 'Offline, click to call me!';
     //     }
     // });
+
+    // This how you would remove the event listener if needed:
+    //userInfoButton.removeEventListener('click', handleClickEvent);
+
+
 };
 
 rebuildOtter();
